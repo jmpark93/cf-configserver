@@ -1,0 +1,42 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ${APP_NAME}
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_URL}
+    discovery:
+      client:
+        health-indicator:
+          enabled: false
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+        username: admin
+        password: admin
+        instance:
+          service-url: http://localhost:8081
+
+health:
+  config:
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env, beans, heapdump, threaddump
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+
