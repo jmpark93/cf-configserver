@@ -1,4 +1,4 @@
-package koscom.cf.configserver;
+package com.jmworks.configserver;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
