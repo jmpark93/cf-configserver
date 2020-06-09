@@ -1,0 +1,10 @@
+이름  : Spring Cloud Config
+버전  : 0.0.1
+설명  : SpringBoot 환경설정 외부화
+참조 URL : https://docs.kpaasta.io/dev/msa/config
+
+상세 설명 -----
+* 분산환경에서 배포된 많은 서비스(API 서비스등)들의 환경 설정을 외부(Configuration Externalize)에서 관리
+* HTTP 기반 외부 설정관리를 위한 API 제공 (KEY/VALUE, 또는 YAML 형식 설정)
+* 실시간 설정 변경을 위해 @RefreshScope Annotation 사용
+* Git 리포지토리 연계를 통한 설정정보 관리
