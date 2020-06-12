@@ -26,7 +26,12 @@ spring:
         username: ${BOOT_ADMIN_ID}
         password: ${BOOT_ADMIN_PWD}
         instance:
-          service-url: ${vcap.application.application_uris[0]}
+          service-url: http://${vcap.application.application_uris[0]}
+          metadata:
+            tags:
+              Organization: ${vcap.application.organization_name}
+              Space: ${vcap.application.space_name}
+              APP-INDEX: ${CF_INSTANCE_INDEX}
 
 health:
   config:
