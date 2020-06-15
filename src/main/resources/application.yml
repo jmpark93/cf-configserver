@@ -21,6 +21,7 @@ spring:
   boot:
     admin:
       client:
+        auto-deregistration: false
         enabled: ${USE_BOOT_ADMIN:false}
         url: ${BOOT_ADMIN_URL}
         username: ${BOOT_ADMIN_ID}
